@@ -37,7 +37,13 @@ fun main() {
                  numbersToPush--
              }
 
-             var resultTemp = result.toArray()
+            var resultString =StringBuffer()
+             val numbers = listOf("one", "two", "three", "four")
+             println(numbers)
+             println(numbers.joinToString())
+             val listString = StringBuffer("The list of numbers: ")
+             numbers.joinTo(listString)
+             println(listString)
 
              return result.toList()
          }
