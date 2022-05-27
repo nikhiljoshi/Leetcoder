@@ -1,4 +1,4 @@
-package String
+package random.String
 
 fun main()
 {

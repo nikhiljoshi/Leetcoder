@@ -1,4 +1,4 @@
-package String
+package random.String
 
 import java.util.Collections.max
 
@@ -22,5 +22,5 @@ fun main()
 {
     val sampleString = "aaabbbbbccc"
     println("Longest repeating is :" + longestChar(sampleString))
-    println("Longest repeating is :" +longestChar("aabbcccc"))
+    println("Longest repeating is :" + longestChar("aabbcccc"))
 }

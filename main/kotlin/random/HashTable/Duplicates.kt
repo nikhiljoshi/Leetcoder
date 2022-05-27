@@ -1,4 +1,4 @@
-package HashTable
+package random.Numbers.HashTable
 
 
 fun main() {

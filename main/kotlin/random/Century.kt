@@ -1,4 +1,4 @@
-package Numbers
+package random.Numbers
 //Reverse seqauence
 fun main() {
 
@@ -20,7 +20,18 @@ fun main() {
     println( Solution().century(2000))
     println( Solution().century(89))
 
+    var test: String? = null
+
+    if (test !=null)
+    {
+        println("------")
+    }
 
 
+    val numbers = listOf("one", "two", "three", "four", "five")
+    println(numbers.groupBy { it.first().toUpperCase() })
+    println(numbers.groupBy(keySelector = { it.first() }, valueTransform = { it.toUpperCase() }))
 
+    val numbers1 = listOf("one", "two", "three", "four", "five", "six")
+    println(numbers1.groupingBy { it.first() }.eachCount())
 }

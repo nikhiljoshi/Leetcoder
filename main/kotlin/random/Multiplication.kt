@@ -1,4 +1,4 @@
-package Numbers
+package random.Numbers
 //Reverse seqauence
 fun main() {
 
