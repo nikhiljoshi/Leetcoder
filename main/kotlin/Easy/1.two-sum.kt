@@ -35,27 +35,27 @@ fun main() {
 
     class Solution1 {
     fun twoSum(nums: IntArray, target: Int): IntArray {
-        val mm = HashMap<Int, Int>()
+        val memoryMap = HashMap<Int, Int>()
 
-        var res = mutableListOf<Int>()
+        var result = mutableListOf<Int>()
         
-        for (i in nums.indices) {
-            mm[nums[i]] = i
+        for (index in nums.indices) {
+            memoryMap[nums[index]] = index
         }
         
-        for (i in nums.indices) {
-            val temp = mm.get(target - nums[i])
-            if (temp != null && (temp ?: -1) > i) {
-                res.add(i)
-                res.add(mm.getOrElse(target-nums[i], {0}))
+        for (index in nums.indices) {
+            val temp = memoryMap.get(target - nums[index])
+            if (temp != null && (temp ?: -1) > index) {
+                result.add(index)
+                result.add(memoryMap.getOrElse(target-nums[index], {0}))
             }
         }
 
-        return res.toIntArray()
+        return result.toIntArray()
     }
 }
 
-    println("Example 1 "+ Solution1().twoSum(intArrayOf(2, 7, 11, 15),9))
-    println("Example 2 "+ Solution1().twoSum(intArrayOf(3,2,4),6))
+    println("Example 1 "+ Solution1().twoSum(intArrayOf(2, 7, 11, 15),9).toList())
+    println("Example 2 "+ Solution1().twoSum(intArrayOf(3,2,4),6).toList())
 }
 
